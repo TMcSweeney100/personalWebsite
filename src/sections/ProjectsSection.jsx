@@ -10,8 +10,7 @@ function ProjectsSection() {
           Projects
         </h2>
         <p className="max-w-prose text-pretty text-muted-foreground">
-          2-3 projects is usually enough. Keep summaries crisp and focus on
-          impact. (Placeholders below)
+          A few selected projects that show how I build and what I focus on.
         </p>
       </div>
 
