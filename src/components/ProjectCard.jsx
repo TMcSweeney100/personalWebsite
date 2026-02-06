@@ -76,6 +76,8 @@ function ProjectCard({ project }) {
       </CardContent>
 
       <CardFooter className="mt-auto flex-col gap-2 pt-2 sm:flex-row">
+      <div>
+
         <Button asChild variant="outline" className="w-full">
           <a
             href={project.links.demo}
@@ -86,6 +88,9 @@ function ProjectCard({ project }) {
             Live Demo
           </a>
         </Button>
+      </div>
+      <div>
+
         <Button asChild variant="outline" className="w-full">
           <a
             href={project.links.code}
@@ -96,6 +101,7 @@ function ProjectCard({ project }) {
             Code
           </a>
         </Button>
+      </div>
       </CardFooter>
     </Card>
   )
