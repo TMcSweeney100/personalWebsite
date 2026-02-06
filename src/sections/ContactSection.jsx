@@ -47,7 +47,7 @@ function ContactSection() {
         </div>
 
         <p className="text-sm text-muted-foreground">
-          {profile.contact.location} • {profile.contact.timezone}
+          {profile.contact.location} 
         </p>
       </div>
     </Section>
