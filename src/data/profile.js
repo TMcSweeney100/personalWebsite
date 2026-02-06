@@ -11,21 +11,21 @@ export const profile = {
     "Java, Javascript, React, SQL",
   ],
   snapshot: {
-    title: "Quick snapshot (Placeholder)",
+    title: "Profile summary",
     description:
-      "Use this box for a 30-second overview: domains, strengths, and what roles you're targeting. (Placeholder)",
+      "",
     bullets: [
-      "Focus area / domain #1 (Placeholder)",
-      "Strength / differentiator #2 (Placeholder)",
-      "Preferred role / team style #3 (Placeholder)",
+      "Full-stack software engineer: Java/Spring, SQL, Javascript",
+      "Strengths: fast learner, open to feedback, and focused on clean, maintainable code",
+      "Work well with: collaborative teams building user-friendly, workflow-heavy products",
     ],
   },
   about:
-    "Short about paragraph (3-5 sentences max). Explain what you do, what you enjoy building, and the kinds of problems you like solving. Keep it recruiter-friendly. (Placeholder)",
+    "I’m a junior full-stack software engineer with experience building and improving enterprise HR web applications. I enjoy leanring new languages and frameworks and I’m comfortable learning new tools quickly. I take feedback seriously, and I like working in teams that review code and iterate often. I care about clean, maintainable code and building interfaces that are intuitive for end users.",
   strengths: [
-    "Strength / superpower #1 (Placeholder)",
-    "Strength / superpower #2 (Placeholder)",
-    "Strength / superpower #3 (Placeholder)",
+    "Fast and eager learner with strong fundamentals",
+    "Reliable team contributor with a focus on maintainable code",
+    "Feedback-driven and comfortable with code review",
   ],
   skills: {
     frontend: ["Skill (Placeholder)", "Skill (Placeholder)", "Skill (Placeholder)"],
