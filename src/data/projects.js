@@ -32,7 +32,7 @@ export const projects = [
       "A full-stack wellbeing platform for students and lecturers, combining mood tracking, journaling, task management, analytics, and an AI chat feature in one place. ",
     tags: ["React", "Spring Boot", "Rest API","Database","Authentication","Full Stack"],
     links: {
-      demo: "https://example.com",
+      demo: "https://mh-front-end-wa6q.vercel.app/",
       code: "https://example.com",
     },
     details: {
