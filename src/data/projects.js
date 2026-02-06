@@ -1,28 +1,28 @@
 export const projects = [
   {
-    id: "project-alpha",
-    title: "Project Alpha (Placeholder)",
+    id: "fitzpatrickMarketing",
+    title: "Fitzpatrick Marketing",
     summary:
-      "One-sentence summary that explains what it is and why it matters. (Placeholder)",
-    tags: ["React", "API", "Testing (Placeholder)"],
+      "A fast, responsive marketing site built for a startup founder to present services clearly along with a reliable platform where potential customers can contact him easily",
+    tags: ["React", "Email Service", "Vite", "UI/UX"],
     links: {
-      demo: "https://example.com",
+      demo: "https://fitzpatrickmarketing.org/",
       code: "https://example.com",
     },
     details: {
       problem:
-        "What problem did this solve? Who was it for? What was the goal? (Placeholder)",
+        "A founder needed a modern marketing site that communicates the business quickly, looks professional on mobile/desktop, and makes it easy for potential clients to get in touch.",
       built:
-        "What did you build and how does it work at a high level? (Placeholder)",
+        "A single-page marketing website built with Vite + React, with a clean layout and strong visual hierarchy. Included a contact flow backed by an email service, plus basic bot detection to reduce spam submissions.",
       contribution:
-        "What did you personally own or drive? Be specific. (Placeholder)",
+        "Owned the project end-to-end: gathered requirements from a stakeholder, designed the UI structure, implemented the site in React, integrated email sending, added bot/spam protections, and tested responsiveness across devices.",
       features: [
-        "Key feature #1 (Placeholder)",
-        "Key feature #2 (Placeholder)",
-        "Key feature #3 (Placeholder)",
+        "Mobile-first, responsive layout with clean visual hierarchy",
+        "Contact form integrated with an email service for lead captur",
+        "Bot/spam protection to improve submission quality",
       ],
       learnings:
-        "What did you learn? Tradeoffs, performance, design decisions, etc. (Placeholder)",
+        "Learned how to translate non-technical requirements into implementable tasks, iterate based on feedback, and prioritize UX, clarity, and deadlines in a real client-style project.",
     },
   },
   {

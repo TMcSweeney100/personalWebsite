@@ -9,15 +9,14 @@ function ExperienceSection() {
           Experience
         </h2>
         <p className="max-w-prose text-pretty text-muted-foreground">
-          Keep bullets outcome-oriented (scope, impact, tech). (Placeholders
-          below)
+        Selected responsibilities and outcomes from my current role.
         </p>
       </div>
 
       <ol className="relative space-y-8 border-l pl-6">
         {profile.experience.map((item) => (
           <li key={`${item.company}-${item.role}`} className="relative">
-            <span className="absolute -left-[9px] top-1.5 size-4 rounded-full border bg-background" />
+           
             <div className="space-y-1">
               <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
                 <h3 className="font-semibold tracking-tight">{item.company}</h3>

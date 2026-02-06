@@ -12,7 +12,7 @@ function ContactSection() {
           Contact
         </h2>
         <p className="max-w-prose text-pretty text-muted-foreground">
-          Make it frictionless. One click to email, plus social links.
+          Feel free to reach out. LinkedIn or Email is best.
         </p>
       </div>
 
@@ -47,7 +47,7 @@ function ContactSection() {
         </div>
 
         <p className="text-sm text-muted-foreground">
-          {profile.contact.location} • {profile.contact.timezone}
+          {profile.contact.location} 
         </p>
       </div>
     </Section>

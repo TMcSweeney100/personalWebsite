@@ -9,7 +9,7 @@ function AboutSection() {
           About
         </h2>
         <p className="max-w-prose text-pretty text-muted-foreground">
-          Keep this brief (3-5 sentences). Recruiters scan fast.
+         A short overview of how I work and what I enjoy building
         </p>
       </div>
 

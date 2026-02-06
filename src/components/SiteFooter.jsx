@@ -12,9 +12,9 @@ function SiteFooter() {
         <p>
           {profile.footer.note}{" "}
           <code className="rounded bg-muted px-1 py-0.5">
-            {profile.footer.notePath}
+           
           </code>
-          .
+          
         </p>
       </div>
     </footer>
