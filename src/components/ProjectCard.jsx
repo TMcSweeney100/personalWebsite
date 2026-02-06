@@ -13,7 +13,7 @@ import { Tag } from "@/components/Tag"
 
 function ProjectCard({ project }) {
   return (
-    <Card className="h-full">
+    <Card className="h-full transition-colors hover:border-primary/30 focus-within:border-primary/40">
       <CardHeader className="pb-4">
         <CardTitle className="text-base sm:text-lg">{project.title}</CardTitle>
         <CardDescription className="text-pretty">
@@ -28,7 +28,7 @@ function ProjectCard({ project }) {
           ))}
         </div>
 
-        <details className="group rounded-lg border bg-muted/30 px-4 py-3">
+        <details className="group rounded-lg border bg-muted/30 px-4 py-3 transition-colors hover:border-primary/20">
           <summary className="flex cursor-pointer list-none items-center justify-between gap-3 rounded-md text-sm font-medium outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50">
             <span>Details</span>
             <ChevronDownIcon className="size-4 text-muted-foreground transition-transform group-open:rotate-180" />

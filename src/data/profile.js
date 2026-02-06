@@ -1,14 +1,14 @@
 export const profile = {
-  heroKicker: "Recruiter-friendly one-page portfolio (Placeholder)",
-  name: "Your Name",
+  heroKicker: "Full-stack Software Engineer focused on Java/Spring backends and SQL Server, with modern React experience",
+  name: "Tim Mc Sweeney",
   role: "Software Engineer",
   valueProposition:
     "I build reliable, user-friendly software and ship features with a focus on clarity, performance, and maintainability. (Placeholder)",
   highlights: [
-    "Highlight #1 (Placeholder)",
-    "Highlight #2 (Placeholder)",
-    "Highlight #3 (Placeholder)",
-    "Highlight #4 (Placeholder)",
+    "Msc. Software Engineering",
+    "Full-stack Engineer",
+    "UI/UX Improvement Experience",
+    "Java, Javascript, React, SQL",
   ],
   snapshot: {
     title: "Quick snapshot (Placeholder)",
