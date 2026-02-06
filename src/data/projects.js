@@ -26,7 +26,7 @@ export const projects = [
     },
   },
   {
-    id: "maynoothMentalHealth",
+    id: "maynoothMentalHealthy",
     title: "Maynooth Mental Health App",
     summary:
       "A full-stack wellbeing platform for students and lecturers, combining mood tracking, journaling, task management, analytics, and an AI chat feature in one place. ",
