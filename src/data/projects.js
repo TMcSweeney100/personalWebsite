@@ -7,7 +7,7 @@ export const projects = [
     tags: ["React", "Email Service", "Vite", "UI/UX","Design"],
     links: {
       demo: "https://fitzpatrickmarketing.org/",
-      code: "https://example.com",
+      code: "https://github.com/TMcSweeney100/FitzpatrickMarketingFrontEnd",
     },
     details: {
       problem:
@@ -33,7 +33,7 @@ export const projects = [
     tags: ["React", "Spring Boot", "Rest API","Database","Authentication","Full Stack"],
     links: {
       demo: "https://mh-front-end-wa6q.vercel.app/",
-      code: "https://example.com",
+      code: "https://github.com/TMcSweeney100/FitzpatrickMarketingFrontEnd",
     },
     details: {
       problem:
