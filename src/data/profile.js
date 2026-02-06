@@ -55,7 +55,7 @@ export const profile = {
     timezone: "Timezone (Placeholder)",
   },
   links: {
-    cv: "https://example.com/your-cv.pdf",
+    cv: "/Tim_Mc_Sweeney_CV_January2026NoNumber.pdf",
     github: "https://github.com/TMcSweeney100",
     linkedin: "https://www.linkedin.com/in/t-mc-sweeney/",
   },
