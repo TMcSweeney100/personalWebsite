@@ -1,58 +1,73 @@
-import { GithubIcon, LinkedinIcon, MailIcon } from "lucide-react"
+import { MailIcon } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
+import { CvLink } from "@/components/CvLink"
+import { HairlineCell, HairlineGrid } from "@/components/HairlineGrid"
+import { MetaLabel } from "@/components/MetaLabel"
+import { Reveal } from "@/components/Reveal"
 import { Section } from "@/components/Section"
+import { Button } from "@/components/ui/button"
 import { profile } from "@/data/profile"
 
-function ContactSection() {
-  return (
-    <Section id="contact">
-      <div className="mb-8 space-y-2">
-        <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-          Contact
-        </h2>
-        <p className="max-w-prose text-pretty text-muted-foreground">
-          Feel free to reach out. LinkedIn or Email is best.
-        </p>
-      </div>
+const detailLinkClass =
+  "mt-[7px] inline-block text-[15.5px] text-foreground transition-colors hover:text-primary"
 
-      <div className="grid gap-6 rounded-2xl border bg-muted/30 p-6 sm:p-8">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <p className="text-sm text-muted-foreground">Email</p>
-            <p className="font-medium">{profile.contact.email}</p>
+function ContactSection() {
+  const { contact, links } = profile
+
+  return (
+    <Section id="contact" className="pb-[clamp(56px,8vw,88px)]">
+      <Reveal className="mt-[clamp(52px,7vw,72px)] rounded-[14px] border border-hairline bg-card px-[clamp(24px,4vw,44px)] py-[clamp(36px,5vw,52px)]">
+        <div className="flex flex-wrap items-end justify-between gap-[clamp(28px,5vw,56px)]">
+          <div className="min-w-0 flex-[1_1_420px]">
+            <MetaLabel className="tracking-[0.16em]">Contact</MetaLabel>
+            <h2 className="mt-4 max-w-[26ch] font-heading text-[clamp(28px,4vw,40px)] leading-[1.1] font-semibold tracking-[-0.026em] text-balance">
+              {contact.heading}
+            </h2>
+            <p className="mt-4 max-w-[50ch] text-[16.5px] leading-[1.65] text-muted-foreground text-pretty">
+              {contact.blurb}
+            </p>
           </div>
 
-          <Button asChild size="lg" className="sm:w-auto">
-            <a href={`mailto:${profile.contact.email}`}>
-              <MailIcon />
-              Email me
-            </a>
-          </Button>
+          <div className="flex flex-wrap gap-3">
+            <Button asChild size="xl" className="hover:-translate-y-px">
+              <a href={`mailto:${contact.email}`}>
+                <MailIcon aria-hidden="true" />
+                Email me
+              </a>
+            </Button>
+            <CvLink size="xl" arrow className="px-[22px]" />
+          </div>
         </div>
 
-        <div className="grid gap-2 sm:grid-cols-2">
-          <Button asChild variant="outline" size="lg">
-            <a href={profile.links.linkedin} target="_blank" rel="noreferrer">
-              <LinkedinIcon />
-              LinkedIn
+        <HairlineGrid className="-mx-5 mt-[clamp(32px,4vw,44px)] bg-hairline-soft">
+          <HairlineCell className="flex-[1_1_220px] bg-card px-5 py-[18px]">
+            <MetaLabel as="p" className="text-[10.5px]">
+              Email
+            </MetaLabel>
+            <a href={`mailto:${contact.email}`} className={detailLinkClass}>
+              {contact.email}
             </a>
-          </Button>
-          <Button asChild variant="outline" size="lg">
-            <a href={profile.links.github} target="_blank" rel="noreferrer">
-              <GithubIcon />
+          </HairlineCell>
+          <HairlineCell className="flex-[1_1_160px] bg-card px-5 py-[18px]">
+            <MetaLabel as="p" className="text-[10.5px]">
               GitHub
+            </MetaLabel>
+            <a href={links.github} target="_blank" rel="noreferrer" className={detailLinkClass}>
+              {links.githubHandle}
             </a>
-          </Button>
-        </div>
-
-        <p className="text-sm text-muted-foreground">
-          {profile.contact.location} 
-        </p>
-      </div>
+          </HairlineCell>
+          <HairlineCell className="flex-[1_1_160px] bg-card px-5 py-[18px]">
+            <MetaLabel as="p" className="text-[10.5px]">
+              LinkedIn
+            </MetaLabel>
+            <a href={links.linkedin} target="_blank" rel="noreferrer" className={detailLinkClass}>
+              {links.linkedinHandle}
+            </a>
+          </HairlineCell>
+        </HairlineGrid>
+      </Reveal>
     </Section>
   )
 }
 
 export { ContactSection }
-

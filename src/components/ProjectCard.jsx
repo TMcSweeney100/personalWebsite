@@ -1,109 +1,63 @@
-import { ChevronDownIcon, ExternalLinkIcon, GithubIcon } from "lucide-react"
+import { ArrowUpRightIcon } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+import { MetaLabel } from "@/components/MetaLabel"
+import { Reveal } from "@/components/Reveal"
 import { Tag } from "@/components/Tag"
 
+/** Secondary project card — everything visible at rest, links pinned to the bottom. */
 function ProjectCard({ project }) {
+  const { links } = project
+
   return (
-    <Card className="h-full transition-colors hover:border-primary/30 focus-within:border-primary/40">
-      <CardHeader className="pb-4">
-        <CardTitle className="text-base sm:text-lg">{project.title}</CardTitle>
-        <CardDescription className="text-pretty">
-          {project.summary}
-        </CardDescription>
-      </CardHeader>
+    <Reveal
+      as="article"
+      className="flex min-w-0 flex-[1_1_380px] flex-col rounded-xl border border-hairline bg-card px-7 py-[26px] transition-colors hover:border-primary/40">
+      <div className="flex items-baseline justify-between gap-4">
+        <h3 className="min-w-0 font-heading text-[21px] font-semibold tracking-[-0.016em]">
+          {project.title}
+        </h3>
+        {project.year ? (
+          <MetaLabel className="flex-none text-[10.5px]">{project.year}</MetaLabel>
+        ) : null}
+      </div>
 
-      <CardContent className="flex flex-col gap-4">
-        <div className="flex flex-wrap gap-2">
-          {project.tags.map((tag) => (
-            <Tag key={tag}>{tag}</Tag>
-          ))}
+      <p className="mt-3 text-[15.5px] leading-[1.6] text-muted-foreground text-pretty">
+        {project.summary}
+      </p>
+
+      <ul className="mt-5 flex flex-wrap gap-2" aria-label="Built with">
+        {project.tags.map((tag) => (
+          <li key={tag}>
+            <Tag size="sm">{tag}</Tag>
+          </li>
+        ))}
+      </ul>
+
+      {links.live || links.code ? (
+        <div className="mt-auto flex flex-wrap items-center gap-[22px] pt-6">
+          {links.live ? (
+            <a
+              href={links.live}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 text-[14.5px] font-medium text-primary transition-colors hover:text-primary-hover">
+              {links.liveLabel ?? "Live site"}
+              <ArrowUpRightIcon aria-hidden="true" className="size-[13px]" />
+            </a>
+          ) : null}
+          {links.code ? (
+            <a
+              href={links.code}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 text-[14.5px] text-muted-foreground transition-colors hover:text-foreground">
+              Source
+              <span className="sr-only"> for {project.title}</span>
+            </a>
+          ) : null}
         </div>
-
-        <details className="group rounded-lg border bg-muted/30 px-4 py-3 transition-colors hover:border-primary/20">
-          <summary className="flex cursor-pointer list-none items-center justify-between gap-3 rounded-md text-sm font-medium outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50">
-            <span>Details</span>
-            <ChevronDownIcon className="size-4 text-muted-foreground transition-transform group-open:rotate-180" />
-          </summary>
-
-          <div className="mt-3 grid gap-4 text-sm">
-            <div>
-              <p className="text-xs font-semibold tracking-wide text-muted-foreground">
-                Problem / Goal
-              </p>
-              <p className="mt-1 text-pretty">{project.details.problem}</p>
-            </div>
-            <div>
-              <p className="text-xs font-semibold tracking-wide text-muted-foreground">
-                What I built
-              </p>
-              <p className="mt-1 text-pretty">{project.details.built}</p>
-            </div>
-            <div>
-              <p className="text-xs font-semibold tracking-wide text-muted-foreground">
-                My contribution
-              </p>
-              <p className="mt-1 text-pretty">{project.details.contribution}</p>
-            </div>
-            <div>
-              <p className="text-xs font-semibold tracking-wide text-muted-foreground">
-                Key features
-              </p>
-              <ul className="mt-1 list-disc space-y-1 pl-5">
-                {project.details.features.map((feature) => (
-                  <li key={feature} className="text-pretty">
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <p className="text-xs font-semibold tracking-wide text-muted-foreground">
-                Learnings
-              </p>
-              <p className="mt-1 text-pretty">{project.details.learnings}</p>
-            </div>
-          </div>
-        </details>
-      </CardContent>
-
-      <CardFooter className="mt-auto flex-col gap-2 pt-2 sm:flex-row">
-      <div>
-
-        <Button asChild variant="outline" className="w-full">
-          <a
-            href={project.links.demo}
-            target="_blank"
-            rel="noreferrer"
-            aria-label={`Open live demo for ${project.title}`}>
-            <ExternalLinkIcon />
-            Live Demo
-          </a>
-        </Button>
-      </div>
-      <div>
-
-        <Button asChild variant="outline" className="w-full">
-          <a
-            href={project.links.code}
-            target="_blank"
-            rel="noreferrer"
-            aria-label={`Open source code for ${project.title}`}>
-            <GithubIcon />
-            Code
-          </a>
-        </Button>
-      </div>
-      </CardFooter>
-    </Card>
+      ) : null}
+    </Reveal>
   )
 }
 
