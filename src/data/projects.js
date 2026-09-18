@@ -16,9 +16,13 @@ export const projects = [
       liveLabel: "Open live site",
       code: "https://github.com/TMcSweeney100/leavingCertBiologyWebsite",
     },
-    // Set to { src, alt, width, height } once the 1984×600 screenshot exists, e.g.
-    // { src: "/leaving-cert-aac.png", alt: "Leaving Cert AAC student dashboard", width: 1984, height: 600 }
-    screenshot: null,
+    // 1984×600 (2×) band of the class schedule page; set to null to show the placeholder.
+    screenshot: {
+      src: "/leaving-cert-aac.png",
+      alt: "Leaving Cert AAC class schedule: the Biology in Practice Investigation stage tracker and the current stage, Designing and Planning the Experiment, with a countdown to its deadline",
+      width: 1984,
+      height: 600,
+    },
   },
   {
     id: "maynoothMentalHealth",
