@@ -7,7 +7,6 @@ export const projects = [
     year: "2026",
     live: true,
     displayUrl: "leavingcertaac.com",
-    // Draft — Tim is rewriting this description.
     summary:
       "A study platform for Leaving Cert Biology, built and maintained solo and used by students at Wicklow Educate Together Secondary School.",
     tags: ["React", "TypeScript", "Vite", "Solo build", "Education"],

@@ -34,7 +34,6 @@ export const profile = {
       "I’m a full-stack engineer at Optum, working on the RxSync platform. Before that I spent a year at Strandum HR on an enterprise HR product, shipping fixes and enhancements across the UI, the business logic and the database behind it.",
       "Outside work I build my own products end-to-end. Leaving Cert AAC is the one I’m proudest of — it’s used by real students, which means real feedback and no hiding behind a demo. I care about clean, maintainable code and interfaces that are obvious to the person using them.",
     ],
-    // Draft — Tim is rewriting these three lines.
     points: [
       "Ships features end to end, from design through to release",
       "Comfortable in review-heavy Agile teams, and takes feedback seriously",
@@ -82,8 +81,7 @@ export const profile = {
   contact: {
     email: "timmcsweeney50@gmail.com",
     location: "Dublin, IE",
-    // Draft — Tim is rewriting this block.
-    heading: "Happy to talk through any of this.",
+    heading: "Happy to hear from you.",
     blurb: "Dublin based. Email is the quickest way to reach me.",
   },
 
