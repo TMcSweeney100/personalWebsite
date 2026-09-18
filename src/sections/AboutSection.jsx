@@ -1,35 +1,40 @@
-import { Section } from "@/components/Section"
+import { MetaLabel } from "@/components/MetaLabel"
+import { Reveal } from "@/components/Reveal"
+import { Section, SectionHeader } from "@/components/Section"
 import { profile } from "@/data/profile"
 
 function AboutSection() {
+  const { paragraphs, points } = profile.about
+
   return (
     <Section id="about">
-      <div className="mb-8 space-y-2">
-        <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-          About
-        </h2>
-        <p className="max-w-prose text-pretty text-muted-foreground">
-         A short overview of how I work and what I enjoy building
-        </p>
-      </div>
+      <SectionHeader title="About" />
 
-      <div className="grid gap-10 lg:grid-cols-2">
-        <div className="space-y-3">
-          <p className="text-pretty">{profile.about}</p>
-        </div>
+      <div className="flex flex-wrap items-start gap-[clamp(32px,5vw,64px)] pb-2">
+        <Reveal className="min-w-0 flex-[1_1_440px]">
+          {paragraphs.map((paragraph, index) => (
+            <p
+              key={paragraph}
+              className={
+                index === 0
+                  ? "max-w-[62ch] text-[clamp(16.5px,2vw,18px)] leading-[1.7] text-pretty"
+                  : "mt-5 max-w-[62ch] text-[clamp(16.5px,2vw,18px)] leading-[1.7] text-muted-foreground text-pretty"
+              }>
+              {paragraph}
+            </p>
+          ))}
+        </Reveal>
 
-        <div className="rounded-2xl border bg-muted/30 p-6">
-          <h3 className="text-sm font-semibold tracking-tight">
-            Strengths / what I'm good at
-          </h3>
-          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-muted-foreground">
-            {profile.strengths.map((item) => (
-              <li key={item} className="text-pretty">
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
+        <Reveal as="ol" className="min-w-0 flex-[1_1_300px] border-b border-hairline">
+          {points.map((point, index) => (
+            <li key={point} className="flex gap-4 border-t border-hairline py-3.5">
+              <MetaLabel className="w-[26px] flex-none pt-1 text-[10.5px]" aria-hidden="true">
+                {String(index + 1).padStart(2, "0")}
+              </MetaLabel>
+              <p className="text-[15.5px] leading-[1.55]">{point}</p>
+            </li>
+          ))}
+        </Reveal>
       </div>
     </Section>
   )

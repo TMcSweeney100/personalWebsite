@@ -1,67 +1,97 @@
+// All page copy lives here so wording changes never touch layout code.
+// Source: docs/Tim Mc Sweeney CV September 2026.pdf
+
+const NBSP = " "
+
 export const profile = {
-  heroKicker: "Full-stack Software Engineer focused on Java/Spring backends and SQL Server, with modern React experience",
   name: "Tim Mc Sweeney",
-  role: "Software Engineer",
-  valueProposition:
-    "I build reliable, user-friendly software and ship features with a focus on clarity, performance, and maintainability. (Placeholder)",
-  highlights: [
-    "Msc. Software Engineering",
-    "Full-stack Engineer",
-    "UI/UX Improvement Experience",
-    "Java, Javascript, React, SQL",
+  /** Name with non-breaking spaces, for the wordmark and H1. */
+  nameNoBreak: `Tim${NBSP}Mc${NBSP}Sweeney`,
+  eyebrow: "Full-stack software engineer",
+  lede: "React and TypeScript interfaces, Java/Spring services, SQL underneath.",
+
+  skills: [
+    { label: "Front end", value: "React · TypeScript", sub: "JavaScript, Tailwind" },
+    { label: "Back end", value: "Java · Spring · Python", sub: "SQL, REST APIs" },
   ],
-  snapshot: {
-    title: "Profile summary",
-    description:
-      "",
-    bullets: [
-      "Full-stack software engineer: Java/Spring, SQL, Javascript",
-      "Strengths: fast learner, open to feedback, and focused on clean, maintainable code",
-      "Work well with: collaborative teams building user-friendly, workflow-heavy products",
-    ],
+
+  currently: {
+    company: `Optum (UnitedHealth${NBSP}Group)`,
+    role: "Full Stack Software Engineer · RxSync platform",
+    dates: "Jul 2026 — Present · Dublin",
   },
-  about:
-    "I’m a junior full-stack software engineer with experience building and improving enterprise user friendly web applications. I enjoy leanring new languages and frameworks and I’m comfortable learning new tools quickly. I take feedback seriously, and I like working in teams that review code and iterate often. I care about clean, maintainable code and building interfaces that are intuitive for end users.",
-  strengths: [
-    "Fast and eager learner with strong fundamentals",
-    "Reliable team contributor with a focus on maintainable code",
-    "Feedback-driven and comfortable with code review",
-  ],
-  skills: {
-    frontend: ["React", "JavaScript", "HTML/CSS/Tailwind", "Responsive UI"],
-    backend: ["Java", "Spring", "SQL", "REST API", "Node.js"],
-    tools: [
-      "Git/Gitlab",
-      "Debugging",
-      "Agile/Scrum",
-      "Code Review"
-    ],
-  },
-  experience: [
+
+  education: [
     {
-      company: "Strandum HR",
-      role: "Junior Software Engineer",
-      dates: "June 2025 - Present",
-      bullets: [
-        "Resolved bugs and implemented enhancements across UI, business logic, and database-backed functionality.",
-        "Helped improve the UI/UX and other features for the companys web application for an enterprise HR web application, shipping changes safely with the team.",
-        "Collaborated through code reviews, QA validation, and iterative delivery to maintain quality and reliability.",
-      ],
+      degree: "MSc Software Engineering",
+      institution: "Maynooth University",
+      grade: "Final grade 1.1",
     },
   ],
+
+  about: {
+    paragraphs: [
+      "I’m a full-stack engineer at Optum, working on the RxSync platform. Before that I spent a year at Strandum HR on an enterprise HR product, shipping fixes and enhancements across the UI, the business logic and the database behind it.",
+      "Outside work I build my own products end-to-end. Leaving Cert AAC is the one I’m proudest of — it’s used by real students, which means real feedback and no hiding behind a demo. I care about clean, maintainable code and interfaces that are obvious to the person using them.",
+    ],
+    // Draft — Tim is rewriting these three lines.
+    points: [
+      "Ships features end to end, from design through to release",
+      "Comfortable in review-heavy Agile teams, and takes feedback seriously",
+      "Builds for real users: Leaving Cert AAC is in daily use by students",
+    ],
+  },
+
+  experience: [
+    {
+      company: `Optum (UnitedHealth${NBSP}Group)`,
+      location: "Dublin",
+      role: "Full Stack Software Engineer",
+      dates: "Jul 2026 — Present",
+      current: true,
+      summary:
+        "Full-stack development on RxSync, an enterprise platform that supports OptumRx Network Operations through workflow automation, API integrations and secure backend services.",
+      bullets: [
+        "Develop and maintain full-stack features using React, TypeScript, Python, Spring Boot, Java and SQL.",
+        "Build and integrate REST APIs between front-end applications, backend services and wider enterprise systems.",
+        "Diagnose and fix application and integration issues across the stack, working to security and engineering standards.",
+      ],
+    },
+    {
+      company: "Strandum HR",
+      location: "Dublin",
+      role: "Junior Software Engineer",
+      dates: "Jun 2025 — Jun 2026",
+      bullets: [
+        "Built and maintained full-stack features for an enterprise HR platform: JSF and PrimeFaces on the front end, Java and Spring behind it.",
+        "Contributed to Project Leon (v8), a major UI/UX upgrade of the platform, implementing pages and components, reducing load times and improving accessibility.",
+        "Designed and optimised SQL queries, stored procedures and schemas in Microsoft SQL Server, improving performance and data integrity.",
+      ],
+    },
+    {
+      company: "Maynooth University",
+      location: "Education",
+      role: "MSc Software Engineering",
+      dates: "Graduated Mar 2026",
+      summary: "Final grade 1.1",
+      bullets: [],
+    },
+  ],
+  experienceRange: "2025 — Present",
+
   contact: {
     email: "timmcsweeney50@gmail.com",
-    location: "Dublin",
-    timezone: "Timezone (Placeholder)",
+    location: "Dublin, IE",
+    // Draft — Tim is rewriting this block.
+    heading: "Happy to talk through any of this.",
+    blurb: "Dublin based. Email is the quickest way to reach me.",
   },
+
   links: {
-    cv: "/Tim_Mc_Sweeney_CV_January2026NoNumber.pdf",
+    cv: "/Tim_Mc_Sweeney_CV_September_2026.pdf",
     github: "https://github.com/TMcSweeney100",
+    githubHandle: "TMcSweeney100",
     linkedin: "https://www.linkedin.com/in/t-mc-sweeney/",
-  },
-  footer: {
-    copyright: "All rights reserved",
-    note: "Built with React + Vite.",
-    notePath: "src/data",
+    linkedinHandle: "t-mc-sweeney",
   },
 }

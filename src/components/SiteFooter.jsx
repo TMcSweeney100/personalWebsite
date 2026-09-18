@@ -1,22 +1,17 @@
+import { MetaLabel } from "@/components/MetaLabel"
+import { Container } from "@/components/Section"
 import { profile } from "@/data/profile"
 
 function SiteFooter() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="border-t py-10">
-      <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
-        <p>
-          © {year} {profile.name}. {profile.footer.copyright}
-        </p>
-        <p>
-          {profile.footer.note}{" "}
-          <code className="rounded bg-muted px-1 py-0.5">
-           
-          </code>
-          
-        </p>
-      </div>
+    <footer className="border-t border-hairline-soft">
+      <Container className="flex flex-wrap items-center justify-between gap-4 py-[26px]">
+        <MetaLabel as="p" className="tracking-[0.1em]">
+          © {year} {profile.name}
+        </MetaLabel>
+      </Container>
     </footer>
   )
 }
